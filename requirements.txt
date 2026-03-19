@@ -1,0 +1,9 @@
+fastapi[all]
+uvicorn[standard]
+sqlalchemy[asyncio]
+aiosqlite
+alembic
+python-dotenv
+yookassa==3.4.0
+apscheduler==3.10.4
+python-telegram-bot==21.0
