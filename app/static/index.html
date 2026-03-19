@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MarketService</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --gold: #D4AF37; --dark: #000000; --dark2: #111111; }
+    body { background: var(--dark); color: var(--gold); font-family: system-ui; }
+    .gold { color: var(--gold); }
+    .card { background: var(--dark2); border: 1px solid var(--gold); border-radius: 16px; }
+  </style>
+</head>
+<body class="min-h-screen p-5">
+  <div class="max-w-md mx-auto">
+    <h1 class="text-4xl font-bold text-center gold mb-8">MarketService</h1>
+
+    <div class="card p-6 mb-6">
+      <h2 class="text-2xl mb-3">Ваша компания</h2>
+      <p id="company-name" class="text-xl">Загрузка...</p>
+      <p id="trial-info" class="mt-2 text-sm opacity-80"></p>
+    </div>
+
+    <button onclick="subscribe()" class="w-full py-5 bg-gradient-to-r from-yellow-600 to-amber-600 text-black font-bold text-xl rounded-2xl shadow-lg mb-6">
+      Подписка 150₽/мес +50₽/специалист
+    </button>
+
+    <div class="text-center text-sm opacity-70">
+      7 дней бесплатно при создании
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
