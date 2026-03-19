@@ -1,0 +1,57 @@
+/* app/static/tailwind.css */
+
+/* Подключаем Tailwind (если используешь standalone CLI или CDN не хватает) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Кастомные цвета в стиле black + gold luxury */
+:root {
+  --color-bg-primary: #000000;      /* основной чёрный фон */
+  --color-bg-secondary: #0f0f0f;    /* чуть светлее для карточек */
+  --color-bg-elevated: #111111;     /* для карточек/панелей */
+  
+  --color-gold: #d4af37;            /* классический золотой */
+  --color-gold-light: #e8c670;      /* светлый золотой для hover/акцентов */
+  --color-gold-dark: #b8962e;       /* тёмный золотой для pressed */
+  
+  --color-text-primary: #ffffff;    /* белый текст */
+  --color-text-secondary: #d4af37;  /* золотой текст */
+  --color-text-muted: #a0a0a0;      /* серый для описаний */
+  
+  --color-border: #d4af37;          /* золотые рамки */
+  --color-border-subtle: #333333;   /* тёмные разделители */
+}
+
+/* Тёмная тема по умолчанию (можно переключать классом .light на body) */
+body {
+  @apply bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] min-h-screen;
+}
+
+/* Удобные утилиты / компоненты */
+.gold-text {
+  @apply text-[var(--color-gold)];
+}
+
+.gold-bg {
+  @apply bg-[var(--color-gold)] text-black;
+}
+
+.card {
+  @apply bg-[var(--color-bg-elevated)] border border-[var(--color-border)] rounded-2xl p-6 shadow-xl shadow-black/40;
+}
+
+.btn-gold {
+  @apply bg-gradient-to-r from-[var(--color-gold)] to-[var(--color-gold-light)] 
+         text-black font-bold py-4 px-8 rounded-xl 
+         hover:brightness-110 transition-all duration-200 shadow-lg;
+}
+
+.gold-border {
+  @apply border-[var(--color-border)] border-2;
+}
+
+/* Hover-эффекты с золотом */
+.hover\:gold-glow:hover {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+}
